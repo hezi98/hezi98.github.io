@@ -2,13 +2,13 @@
 
 ![logo](_media/icon.svg)
 
-# 何子哥哥的博客
+# docsify <small>3.5</small>
 
-> 学习wep无止境
+> A magical documentation site generator.
 
 - Simple and lightweight
 - No statically built html files
 - Multiple themes
 
 [GitHub](https://github.com/docsifyjs/docsify/)
-[Let's Go!!!](./README.md)
+[Get Started](#docsify)
