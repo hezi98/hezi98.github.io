@@ -2,23 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Document</title>
+    <title>He zi</title>
+    <link rel="shortcut icon" href="./_media/favicon.ico" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
     />
-    <link rel="stylesheet"href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"/>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
+    />
     <style>
       /* 去掉目录前的短横线 */
-    .app-sub-sidebar li:before{
+      .app-sub-sidebar li:before {
         content: '';
-    }
-    .medium-zoom-image{
+      }
+      .medium-zoom-image {
         width: 20%;
-    }
-  </style>
+      }
+      /* 页面滚动 */
+      .content {
+        overflow: auto;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
@@ -26,7 +34,7 @@
       window.$docsify = {
         coverpage: true,
         name: 'HEZI',
-        repo: 'https://github.com/irwinai/JavaInterview.git',
+        repo: 'https://github.com/hezi98/hezi98.github.io/tree/main/docs',
         loadSidebar: true,
         autoHeader: true,
         subMaxLevel: 6,

@@ -1,12 +1,11 @@
 - HTML&CSS
 
-  - [HTML](./html/1.html总结.md)
-
-- webAPI
-
-  - [webAPI](./1.面试知识点总结/2.wepAPI.md)
+  - [HTML重要知识点](./html/1.html总结.md)
 
 - JS
 
-  - [JS](./js/1.常见开发场景代码.md)
-  - [JS](./js/2.JS.md)
+  - [JS重要知识点](./js/2.JS.md)
+
+- 常见开发场景
+
+  - [常见开发场景](./js/1.常见开发场景代码.md)
