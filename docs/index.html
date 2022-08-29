@@ -15,7 +15,7 @@
       href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
     />
     <style>
-      /* 去掉目录前的短横线 */
+      去掉目录前的短横线
       .app-sub-sidebar li:before {
         content: '';
       }
@@ -23,7 +23,7 @@
         width: 20%;
       }
       /* 页面滚动 */
-      .content {
+      body:not(.ready) {
         overflow: auto;
       }
     </style>
@@ -36,6 +36,7 @@
         name: 'HEZI',
         repo: 'https://github.com/hezi98/hezi98.github.io/tree/main/docs',
         loadSidebar: true,
+        loadNavbar: true,
         autoHeader: true,
         subMaxLevel: 6,
         sidebarDisplayLevel: 6, // set sidebar display level
