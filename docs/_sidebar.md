@@ -8,7 +8,7 @@
 
 - VUE
 
-  - [JS重要知识点](./vue/1.webpack配置.md)
+  - [webpack手动配置](./vue/1.webpack配置.md)
 
 - 其他
 
