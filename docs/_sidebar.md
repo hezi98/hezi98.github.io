@@ -6,6 +6,10 @@
 
   - [JS重要知识点](./js/2.JS.md)
 
+- VUE
+
+  - [JS重要知识点](./vue/1.webpack配置.md)
+
 - 其他
 
   - [Git配置](./js/3.git配置步骤.md)
