@@ -9,7 +9,7 @@
 - VUE
 
   - [webpack手动配置](./vue/1.webpack配置.md)
-  - [配置洁净vue脚手架](./vue/2.vue 洁净脚手架配置.md)
+  - [vue洁净脚手架配置](./vue/2.vue洁净脚手架配置.md)
 
 - 其他
 
