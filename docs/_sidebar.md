@@ -8,6 +8,7 @@
 
 - VUE
 
+  - [vue知识点笔记](./vue/3.vue知识点笔记.md)
   - [webpack手动配置](./vue/1.webpack配置.md)
   - [vue洁净脚手架配置](./vue/2.vue洁净脚手架配置.md)
 
