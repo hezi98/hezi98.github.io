@@ -6,6 +6,10 @@
 
   - [JS知识点](./js/2.JS.md)
 
+- network相关
+
+  - [network相关](./others/05.网络相关.md)
+
 - VUE
 
   - [vue笔记](./vue/3.vue笔记.md)
