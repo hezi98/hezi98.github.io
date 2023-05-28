@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Subject() {
+            let listeners = []
+            return {
+                publish(val) {
+                    // 发布不止一次
+                    for(let listener of listeners) {
+                        listener(val)
+                    }
+                },
+                // 订阅
+                subscribe(cb) {
+                    listeners.push(cb)
+                },
+                // 取消订阅
+                unsubscribe(cb) {
+                    for(let ket in listeners) {
+                        if(listeners[key] === cb) {
+                            listeners.splice(key, 1)
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

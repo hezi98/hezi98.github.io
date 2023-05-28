@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布订阅</title>
+</head>
+<body>
+
+    <script>
+        function Subject() {
+            let listener = null
+            return {
+                publish(val) {
+                    listener(val)
+                },
+                subscribe(cb) {
+                    listener = cb
+                }
+            }
+        }
+
+        // 注册听众
+        const subject = Subject()
+        subject.subscribe((val) => {
+            console.log('我是发布时执行的逻辑', val);
+        })
+
+        setTimeout(() => {
+            subject.publish('一秒后调用')
+        }, 1000)
+    </script>
+</body>
+</html>

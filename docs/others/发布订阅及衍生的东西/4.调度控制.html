@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="subject.throttlePulish('ggg')">点我进行延迟</button>
+    <script>
+        // 发布订阅的调度控制：
+        // 1. 我们可以在publish调用时，决定传给听众的内容
+        // 2. 我们可以决定publish调用的时间
+        // 3. 我们可以决定publish调用时，是否传给听众内容
+        function Subject() {
+            let listeners = null
+            const zipArr = [] // 打包的数组
+            let timer = null // 控制debounce
+            let flag = true // 控制throttle
+            return {
+                publish(val) {
+                    listener(val)
+                },
+                // delay
+                delayPulish(val) {
+                    setTimeout(() => {
+                        listener(val)
+                    }, 1000)
+                },
+                // zip
+                zipPulish(val) {
+                    zipArr.push(val)
+                    if(zipArr.length >= 8) {
+                        listener(zipArr)
+                        zipArr.length = 0
+                    }
+                },
+                // debounce
+                debouncePulish(val) {
+                    // 在调用之前清除定时器就能达到防抖效果
+                    if(timer) clearTimeout(timer)
+                    // 再利用delay的逻辑
+                    timer = setTimeout(() => {
+                        listener(val)
+                    }, 1000)
+                },
+                // throttle
+                throttlePulish(val) {
+                    if(flag) {
+                        listener(val)
+                        flag = false
+                        setTimeout(() => (flag = true), 1000)
+                    }
+                },
+                // 订阅
+                subscribe(cb) {
+                    listener = cb
+                }
+            }
+        }
+        // 调度问题包括：
+        // 1. delay(延迟) 延迟调用publish
+        // 2. zip(打包) 将规定的参数搜集齐了之后再进行publish(大多数用在快捷键上)
+        // debounce(防抖) 当你在意最新的值时就用debounce(比如搜索框)
+        // throttle(节流)
+
+        // 初始化发布订阅
+        const subject = Subject()
+        // 订阅
+        subject.subscribe(msg => {
+            console.log(msg);
+        })
+        // zip
+        window.addEventListener('keyup', (e) => {
+            subject.zipPulish(e.key)
+        })
+    </script>
+</body>
+</html>

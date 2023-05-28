@@ -13,6 +13,9 @@
   - [vue基础知识点](./vue/4.vue基础阶段知识点总结.md)
   - [webpack手动配置](./vue/1.webpack配置.md)
   - [vue洁净脚手架配置](./vue/2.vue洁净脚手架配置.md)
+- Webpack5
+
+  - [基础配置](./webpack//1.base.md)
 - 其他
 
   - [Git相关](./others/3.git相关操作.md)

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // promise 是特殊的发布订阅：
+        // 1. 只发布一次
+        // 2. 有状态
+        // 3. 可以处理错误
+        // 4. 可以链式调用
+        class Promise {
+            // 1.只发布一次的解决方法是在new的时候调用
+            constructor(publisher) {
+                this.listener = null
+                // 让promise有状态
+                this.status = 'pendding'
+                publisher(this.__pushlish)
+            }
+            __pushlish(val) {
+                if(this.status !== 'pendding') return
+                this.listener(val)
+            }
+            then(cb) {
+                this.listener = cb
+            }
+        }
+
+        const promise = new Promise((resolve) => {
+            resolve()
+        })
+    </script>
+</body>
+</html>
