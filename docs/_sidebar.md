@@ -1,9 +1,10 @@
 - HTML&CSS
 
   - [HTML&CSS知识点](./html&css/1.html总结.md)
-- JS
+- JS&TS
 
   - [JS知识点](./js/2.JS.md)
+  - [TS知识点](./js/1.TS.md)
 - network相关
 
   - [network相关](./others/05.网络相关.md)
